@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chai Corner | Tea house in Hyderabad</title>
+<meta name="description" content="Slow-brewed chai, fresh snacks and a quiet corner. Open daily 7 AM to 10 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{--ink:#12303f;--leaf:#2f6f5e;--saffron:#f0a500;--mist:#eef4f2;--paper:#fbfdfc;--text:#1d2b32}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;color:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid #dbe6e2;z-index:5}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:960px;margin:0 auto}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-weight:500}
+nav ul a:hover{color:var(--leaf)}
+.hero{background:var(--ink);color:#fff;padding:72px 0 80px}
+.hero h1{color:#fff;font-size:clamp(2.6rem,9vw,5.2rem);font-weight:800;max-width:11ch}
+.hero p{max-width:46ch;margin:20px 0 28px;font-size:1.1rem;color:#cfe0dc}
+.btn{display:inline-block;background:var(--saffron);color:var(--ink);font-weight:500;padding:13px 24px;border-radius:8px;text-decoration:none;border:0;font:inherit;font-weight:500;cursor:pointer}
+.btn:hover{background:#ffbb2e}
+section{padding:64px 0}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:24px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px}
+.menu h3{font-size:1.2rem;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--saffron)}
+.item{display:flex;justify-content:space-between;gap:12px;padding:7px 0}
+.item small{display:block;color:#53666d}
+.price{font-weight:500;white-space:nowrap}
+.alt{background:var(--mist)}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;align-items:start}
+.hours{list-style:none;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #cfdcd8}
+form{display:grid;gap:14px;max-width:460px}
+label{font-weight:500;display:grid;gap:6px}
+input,textarea{font:inherit;padding:11px 12px;border:1.5px solid #9db3ad;border-radius:8px;background:#fff}
+#msg{min-height:1.5em;font-weight:500}
+#msg.ok{color:var(--leaf)}#msg.err{color:#b3261e}
+footer{background:var(--ink);color:#cfe0dc;padding:28px 0;text-align:center;font-size:.95rem}
+@media (max-width:520px){nav ul{gap:12px}.hero{padding:48px 0 56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Main">
+    <a class="logo" href="#top">Chai Corner</a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Chai, brewed slow.</h1>
+      <p>Fresh milk, crushed ginger and whole spices, simmered in small batches since 2019. Pull up a stool and stay a while.</p>
+      <a class="btn" href="#menu">See the menu</a>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Menu</h2>
+      <div class="menu">
+        <div>
+          <h3>Chai</h3>
+          <div class="item"><span>Masala chai<small>Ginger, cardamom, clove</small></span><span class="price">₹30</span></div>
+          <div class="item"><span>Irani chai<small>Rich, sweet, served hot</small></span><span class="price">₹40</span></div>
+          <div class="item"><span>Kulhad chai<small>In a clay cup</small></span><span class="price">₹45</span></div>
+        </div>
+        <div>
+          <h3>Snacks</h3>
+          <div class="item"><span>Osmania biscuits<small>Plate of 4</small></span><span class="price">₹40</span></div>
+          <div class="item"><span>Samosa<small>With mint chutney</small></span><span class="price">₹25</span></div>
+          <div class="item"><span>Bun maska<small>Soft bun, fresh butter</small></span><span class="price">₹50</span></div>
+        </div>
+        <div>
+          <h3>Cold</h3>
+          <div class="item"><span>Iced lemon tea</span><span class="price">₹60</span></div>
+          <div class="item"><span>Cold coffee</span><span class="price">₹80</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="alt">
+    <div class="wrap about">
+      <div>
+        <h2>Visit us</h2>
+        <p>12 Lake View Road, Banjara Hills, Hyderabad. Two minutes from the metro station. Free Wi-Fi and plenty of seating.</p>
+      </div>
+      <ul class="hours" aria-label="Opening hours">
+        <li><span>Monday to Friday</span><span>7 AM to 10 PM</span></li>
+        <li><span>Saturday</span><span>7 AM to 11 PM</span></li>
+        <li><span>Sunday</span><span>8 AM to 10 PM</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Book a table or ask us anything</h2>
+      <form id="form" novalidate>
+        <label>Name<input id="name" name="name" autocomplete="name" required></label>
+        <label>Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea id="message" name="message" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Chai Corner. Demo project for portfolio use.</div></footer>
+
+<script>
+const form = document.getElementById('form');
+const msg = document.getElementById('msg');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const text = form.message.value.trim();
+  msg.className = 'err';
+  if (!name) return msg.textContent = 'Enter your name.';
+  if (!/^\S+@\S+\.\S+$/.test(email)) return msg.textContent = 'Enter a valid email address.';
+  if (text.length < 10) return msg.textContent = 'Write at least 10 characters in your message.';
+  msg.className = 'ok';
+  msg.textContent = 'Thanks, ' + name + '. We will reply to ' + email + ' soon.';
+  form.reset();
+});
+</script>
+</body>
+</html>
